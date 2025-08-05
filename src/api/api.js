@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const axiosBaseUrl = axios.create({
-  baseURL: "https://node-backend-ger9.onrender.com/api",
-  withCredentials: true, // ⭐️ for cookie to be saved
+  baseURL: "http://localhost:8080/api",
 });
 
 export const sendEnquery = async (value) => {
