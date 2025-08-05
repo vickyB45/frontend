@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosBaseUrl = axios.create({
-  baseURL: "http://localhost:8080/api",
+  baseURL: "https://node-backend-2-dzae.onrender.com/api",
 });
 
 export const sendEnquery = async (value) => {
