@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosBaseUrl = axios.create({
-  baseURL: "http://node-backend-5-v4ue.onrender.com/api",
+  baseURL: "https://node-backend-5-v4ue.onrender.com/api",
 });
 
 export const sendEnquery = async (value) => {
