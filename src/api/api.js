@@ -5,7 +5,7 @@ const axiosBaseUrl = axios.create({
 });
 
 export const sendEnquery = async (value) => {
-  try {
+  try {    
     const res = await axiosBaseUrl.post("/enquiry", value);
     return res.data;
   } catch (error) {
