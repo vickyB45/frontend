@@ -7,6 +7,8 @@ import OtherPackages from '../components/OtherPackages'
 import StickyButtons from '../components/StickyButtons'
 import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
+import DevDeepawaliSection from './DevDeepawaliSection'
+import ReviewsCarousel from '../components/ReviewsCarousel'
 
 const Home = () => {
   return (
@@ -14,11 +16,11 @@ const Home = () => {
         <Banner />
       <Itinerary />
       <PackageInclusion />
-      <CTAForm />
+      {/* <CTAForm /> */}
       <OtherPackages />
       <StickyButtons />
       <FAQ/>
-      <Footer/>
+      <ReviewsCarousel />
     </div>
   )
 }

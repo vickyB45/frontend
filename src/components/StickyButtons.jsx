@@ -15,7 +15,7 @@ const navigate = useNavigate()
 
       {/* Call */}
       <a
-        href="tel:+91 9569275026" // Replace with actual number
+        href="tel:+919569275026" // Replace with actual number
         className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full font-semibold shadow-md"
       >
         Call Now
@@ -23,7 +23,7 @@ const navigate = useNavigate()
       
         {/* Chat (WhatsApp) */}
       <a
-        href="https://wa.me/+91 9569275026" // Replace with actual number
+        href="https://wa.me/+919569275026" // Replace with actual number
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-semibold shadow-md"
@@ -31,10 +31,13 @@ const navigate = useNavigate()
         Chat With Us
       </a>
        <button
-        onClick={() =>
+        onClick={() =>{
+          
           document
             .querySelector("form")
             ?.scrollIntoView({ behavior: "smooth" })
+            navigate("/inquiry")
+        }
         }
         className="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-full font-semibold shadow-md"
       >

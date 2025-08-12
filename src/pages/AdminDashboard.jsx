@@ -90,8 +90,6 @@ const AdminDashboard = () => {
                     <TableCell><strong>Phone</strong></TableCell>
                     <TableCell><strong>Email</strong></TableCell>
                     <TableCell><strong>Date</strong></TableCell>
-                    <TableCell><strong>Persons</strong></TableCell>
-                    <TableCell><strong>Purpose</strong></TableCell>
                     <TableCell><strong>Submitted At</strong></TableCell>
                   </TableRow>
                 </TableHead>
@@ -102,8 +100,6 @@ const AdminDashboard = () => {
                       <TableCell>{entry.phone}</TableCell>
                       <TableCell>{entry.email}</TableCell>
                       <TableCell>{entry.date}</TableCell>
-                      <TableCell>{entry.persons}</TableCell>
-                      <TableCell>{entry.purpose}</TableCell>
                       <TableCell>
                         {new Date(entry.submittedAt).toLocaleString()}
                       </TableCell>

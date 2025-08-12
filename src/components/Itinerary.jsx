@@ -5,6 +5,17 @@ import {
   FaMapMarkedAlt,
 } from "react-icons/fa";
 
+// Animation variants
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  show: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay, duration: 0.6, ease: "easeOut" },
+  }),
+};
+
+// Itinerary data
 const itinerary = [
   {
     day: "Day 1: Arrival in Varanasi",
@@ -31,37 +42,47 @@ const itinerary = [
 
 const Itinerary = () => {
   return (
-    <section className="py-8 bg-gradient-to-b from-[#f3f4f6] to-white px-4">
+    <section
+      className="py-10 bg-gradient-to-b from-gray-100 to-white px-4"
+      id="itinerary"
+    >
       <div className="max-w-5xl mx-auto">
+        {/* Heading */}
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--primary-color)]"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--primary-color,#1e3a8a)]"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
         >
           Dev Deepawali Package – 2 Nights / 3 Days
         </motion.h2>
 
+        {/* Itinerary Cards */}
         <div className="space-y-8">
           {itinerary.map((item, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 p-6 flex items-start gap-5"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2 }}
+              className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 p-6 flex flex-col sm:flex-row items-start gap-5"
+              variants={fadeUp}
+              custom={index * 0.2}
+              initial="hidden"
+              whileInView="show"
             >
+              {/* Icon */}
               <div
-                className={`w-12 h-12 ${item.iconBg} rounded-full flex items-center justify-center shadow`}
+                className={`w-14 h-14 ${item.iconBg} rounded-full flex items-center justify-center shadow-lg flex-shrink-0`}
               >
                 {item.icon}
               </div>
 
+              {/* Text Content */}
               <div>
-                <h3 className="text-xl font-semibold mb-1 text-gray-900">
+                <h3 className="text-lg md:text-xl font-semibold mb-1 text-gray-900">
                   {item.day}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                  {item.description}
+                </p>
               </div>
             </motion.div>
           ))}
