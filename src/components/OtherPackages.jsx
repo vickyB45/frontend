@@ -45,10 +45,11 @@ const fadeUp = {
 };
 
 const OtherPackages = () => {
-  const [showForm, setShowForm] = useState(false);
+  
+    const [showCTA, setShowCTA] = useState(false);
 
   const handleEnquireClick = () => {
-    setShowForm(true);
+    setShowCTA(true);
     // Optional: scroll to form smoothly
     setTimeout(() => {
       document.querySelector("#ctaForm")?.scrollIntoView({ behavior: "smooth" });
@@ -58,7 +59,7 @@ const OtherPackages = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Thank you for your enquiry!");
-    setShowForm(false);
+    setShowCTA(false);
   };
 
   return (
@@ -107,18 +108,20 @@ const OtherPackages = () => {
           ))}
         </div>
 
-        {/* CTA Form */}
-        {showForm && (
-          <motion.div
-            id="ctaForm"
-            className="mt-16 max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-           <CTAForm/>
-          </motion.div>
-        )}
+       {showCTA && (
+        <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
+          <div className="relative max-w-md w-full bg-white rounded-lg shadow-lg p-6">
+            <button
+              onClick={() => setShowCTA(false)}
+              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl font-bold"
+              aria-label="Close"
+            >
+              &times;
+            </button>
+            <CTAForm />
+          </div>
+        </div>
+      )}
       </div>
     </section>
   );

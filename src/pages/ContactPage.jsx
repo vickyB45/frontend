@@ -1,16 +1,24 @@
 import React from "react";
-import CTAForm from "../components/CTAForm"; // तुमने जो form दिया है
+import CTAForm from "../components/CTAForm";
+import "leaflet/dist/leaflet.css";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: markerIcon2x,
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
 
 const ContactPage = () => {
+  const position = [25.3686, 83.0402]; // approx lat/lng
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-[var(--primary-color,#1e3a8a)] text-white py-12 px-4 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4">Contact Us</h1>
-        <p className="max-w-2xl mx-auto text-sm md:text-base opacity-90">
-          Have questions or want to plan your trip with us? Fill out the quick enquiry form below, or reach us through the contact details provided.
-        </p>
-      </section>
 
       {/* Info Section */}
       <section className="py-10 px-4 max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
@@ -19,8 +27,10 @@ const ContactPage = () => {
             Get in Touch
           </h2>
           <p className="text-gray-600 mb-6 text-sm leading-relaxed">
-            We value your time and are committed to providing the best travel experience. 
-            Whether you need more information about our tours, special packages, or custom trip planning, our team is ready to assist you.
+            We value your time and are committed to providing the best travel
+            experience. Whether you need more information about our tours,
+            special packages, or custom trip planning, our team is ready to
+            assist you.
           </p>
 
           <div className="space-y-4 text-gray-700 text-sm">
@@ -43,18 +53,24 @@ const ContactPage = () => {
       </section>
 
       {/* Map */}
-      <section className="mt-8">
-  <iframe
-    title="Our Location"
-    src="https://www.google.com/maps?q=Varanasi%20Uttar%20Pradesh&z=15&output=embed"
-    width="100%"
-    height="400"
-    style={{ border: 0 }}
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
-</section>
+      <section className="mt-8 relative">
+        <MapContainer
+          center={position}
+          zoom={15}
+          style={{ height: "400px", width: "100%", zIndex: 1 }}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a>'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={position}>
+            <Popup>
+              Basant Vihar Colony, Akatha, Paharia, <br /> Varanasi, Uttar
+              Pradesh 221002
+            </Popup>
+          </Marker>
+        </MapContainer>
+      </section>
     </div>
   );
 };

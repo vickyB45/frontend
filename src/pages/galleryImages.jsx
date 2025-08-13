@@ -4,35 +4,35 @@ import { FaTimes } from "react-icons/fa";
 
 const galleryImages = [
   {
-    src: "https://kashiyatra.in/wp-content/uploads/2024/09/dev-diwali-varanasi.jpg",
+    src: "https://i.pinimg.com/736x/10/fa/43/10fa43f6ca49b841569267a8ef8e0b44.jpg",
     alt: "Thousands of diyas on the ghats of Varanasi",
   },
   {
-    src: "https://roadtotaste.com/wp-content/uploads/2016/12/IMG_6316-01-1024x683.jpg",
+    src: "/image/gallery/1.png",
     alt: "Aarti ceremony during Dev Deepawali",
   },
   {
-    src: "https://vareli.co.in/vareliCMS/public/images/214297571/Dev%20Diwali%20002.jpg",
+     src: "/image/gallery/2.png",
     alt: "Boat ride with glowing ghats in background",
   },
   {
-    src: "https://c8.alamy.com/comp/2H41H6G/enlighten-ganga-ghat-at-varanasi-during-dev-diwali-celebration-2H41H6G.jpg",
+     src: "/image/gallery/3.png",
     alt: "Crowds enjoying the festive lights",
   },
   {
-    src: "https://www.varanasiguru.com/wp-content/uploads/2024/10/Dev-Diwali-Varanasi-Best-Ghat-Top-Attractions-Things-to-do-Dev-Diwali-Booking5.jpg",
+     src: "/image/gallery/4.png",
     alt: "Dashashwamedh Ghat fully illuminated",
   },
   {
-    src: "https://vareli.co.in/vareliCMS/public/images/214297571/Dev%20Diwali%20002.jpg",
+     src: "/image/gallery/5.png",
     alt: "Close-up of diyas during Dev Deepawali",
   },
   {
-    src: "https://media.assettype.com/outlooktraveller%2F2023-11%2F18eebef3-9037-46c8-b107-44c5806ea2fe%2Fshutterstock_1263750487.jpg?auto=format%2Ccompress&w=640",
+     src: "/image/gallery/6.png",
     alt: "Aerial view of Varanasi ghats lit with lamps",
   },
   {
-    src: "https://www.varanasiguru.com/wp-content/uploads/2024/10/Dev-Diwali-Varanasi-Best-Ghat-Top-Attractions-Things-to-do-Dev-Diwali-Booking1.jpg",
+     src: "/image/gallery/7.png",
     alt: "Spiritual vibes at the Ganga river",
   },
 ];
@@ -50,7 +50,7 @@ const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section id="gallery" className="py-12 bg-white px-4">
+    <section id="gallery" className="py-4 bg-white px-4">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <motion.h2
@@ -97,7 +97,7 @@ const GallerySection = () => {
             <img
               src={selectedImage}
               alt="Preview"
-              className="max-h-[90%] max-w-[90%] rounded-lg shadow-lg"
+              className="max-h-[100%] max-w-[100%] rounded-lg shadow-lg"
             />
           </div>
         )}

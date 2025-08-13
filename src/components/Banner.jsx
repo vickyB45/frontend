@@ -39,7 +39,9 @@ const slides = [
 
 const Banner = () => {
   return (
-    <section className="relative h-[70vh] sm:h-[80vh] w-full overflow-hidden">
+    <section
+    id="hero" 
+    className="relative h-[70vh] sm:h-[80vh] w-full overflow-hidden">
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 4000 }}
@@ -56,7 +58,9 @@ const Banner = () => {
                 alt={slide.title}
                 className="absolute inset-0 h-full w-full object-cover"
                 loading={index === 0 ? "eager" : "lazy"}
-                fetchpriority={index === 0 ? "high" : "auto"}
+                fetchPriority={index === 0 ? "high" : "auto"}
+
+
               />
 
               {/* Overlay */}
@@ -108,16 +112,19 @@ const Banner = () => {
       </Swiper>
 
       {/* Custom pagination style */}
-      <style jsx>{`
-        :global(.swiper-pagination-bullet) {
-          background: white !important;
-          opacity: 0.7;
-        }
-        :global(.swiper-pagination-bullet-active) {
-          background: #facc15 !important; /* Tailwind yellow-400 */
-          opacity: 1;
-        }
-      `}</style>
+      <style>
+  {`
+    .swiper-pagination-bullet {
+      background: white !important;
+      opacity: 0.7;
+    }
+    .swiper-pagination-bullet-active {
+      background: #facc15 !important;
+      opacity: 1;
+    }
+  `}
+</style>
+
     </section>
   );
 };

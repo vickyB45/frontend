@@ -33,9 +33,13 @@ const fadeUp = {
   }),
 };
 
-const PackageInclusion = () => {
+const 
+
+PackageInclusion = () => {
   return (
-    <section className="py-6 bg-gradient-to-b from-white to-gray-50 px-4">
+    <section
+    id="toar-package"
+    className="py-6 bg-gradient-to-b from-white to-gray-50 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
           className="text-3xl md:text-4xl font-bold mb-12 text-[var(--primary-color,#1e3a8a)]"
@@ -46,11 +50,11 @@ const PackageInclusion = () => {
           What's Included
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid  grid-cols-2 md:grid-cols-4 md:gap-6 gap-3">
           {inclusions.map((item, index) => (
             <motion.div
               key={index}
-              className="bg-white cursor-pointer p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col items-center gap-4"
+              className="bg-white cursor-pointer px-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col items-center gap-4"
               variants={fadeUp}
               custom={index * 0.15}
               initial="hidden"

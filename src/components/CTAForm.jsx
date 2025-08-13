@@ -32,7 +32,9 @@ const CTAForm = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 py-6 px-4">
+    <section
+    id="inquiry"
+    className="bg-gradient-to-b from-white to-gray-50 py-6 px-4">
       <div className="max-w-md mx-auto">
         <motion.h2
           className="text-2xl md:text-3xl font-bold text-center mb-6 text-[var(--primary-color,#1e3a8a)]"

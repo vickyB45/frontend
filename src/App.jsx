@@ -14,14 +14,9 @@ import ContactPage from './pages/ContactPage'
 const App = () => {
   return (
     <div>
-      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/gallery' element={<GallerySection />} />
-        <Route path='/dev-deepawali' element={<DevDeepawaliInfo />} />
-        <Route path='/other-pacheges' element={<TourPackagesPage />} />
-        <Route path='/inquiry' element={<ContactPage />} />
         <Route
           path='/admin-dashboard'
           element={
@@ -32,7 +27,6 @@ const App = () => {
         />
       </Routes>
       
-      <Footer/>
     </div>
   )
 }

@@ -1,57 +1,29 @@
-import React from 'react'
-import {useNavigate} from "react-router-dom"
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Phone, MessageCircle } from "lucide-react"; // icons
 
 const StickyButtons = () => {
-const navigate = useNavigate()
-  
+  const navigate = useNavigate();
+
   return (
     <div className="fixed bottom-5 right-5 z-[999] flex flex-col gap-3 items-end">
-      {/* Enquiry Button */}
-      
-     
-
-    
-      
-
       {/* Call */}
       <a
-        href="tel:+919569275026" // Replace with actual number
-        className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full font-semibold shadow-md"
+        href="tel:+919569275026"
+        className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-md flex items-center justify-center"
       >
-        Call Now
+        <Phone size={22} />
       </a>
-      
-        {/* Chat (WhatsApp) */}
+
+      {/* Chat (WhatsApp) */}
       <a
-        href="https://wa.me/+919569275026" // Replace with actual number
+        href="https://wa.me/+919569275026"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-semibold shadow-md"
+        className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-md flex items-center justify-center"
       >
-        Chat With Us
+        <MessageCircle size={22} />
       </a>
-       <button
-        onClick={() =>{
-          
-          document
-            .querySelector("form")
-            ?.scrollIntoView({ behavior: "smooth" })
-            navigate("/inquiry")
-        }
-        }
-        className="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-full font-semibold shadow-md"
-      >
-        Enquiry Now
-      </button>
-      <button
-        onClick={() =>{
-          navigate("/admin-dashboard")
-        }
-        }
-        className="bg-white text-black px-4 py-2 cursor-pointer rounded-full font-semibold shadow-md"
-      >
-       Login as Admin
-      </button>
     </div>
   );
 };
