@@ -63,7 +63,10 @@ const OtherPackages = () => {
   };
 
   return (
-    <section className="py-14 bg-gray-50 px-4">
+    <section
+    
+    
+    id="toar-package" className="py-14 bg-gray-50 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--primary-color,#1e3a8a)]"

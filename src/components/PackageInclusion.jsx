@@ -38,7 +38,6 @@ const
 PackageInclusion = () => {
   return (
     <section
-    id="toar-package"
     className="py-6 bg-gradient-to-b from-white to-gray-50 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2

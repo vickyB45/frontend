@@ -1,12 +1,23 @@
 import axios from "axios";
 
 const axiosBaseUrl = axios.create({
-  baseURL: "https://node-backend-5-v4ue.onrender.com/api",
+  baseURL: "https://node-backend-6-j7t2.onrender.com/api",
 });
 
 export const sendEnquery = async (value) => {
   try {    
     const res = await axiosBaseUrl.post("/enquiry", value);
+    return res.data;
+  } catch (error) {
+    console.error("Send enquiry failed:", error);
+    throw error;
+  }
+};
+
+
+export const sendOtherCostomizePackege = async (value) => {
+  try {    
+    const res = await axiosBaseUrl.post("/enquiry/other-package", value);
     return res.data;
   } catch (error) {
     console.error("Send enquiry failed:", error);
@@ -28,6 +39,8 @@ export const LoginAsAdmin = async (value) => {
     throw new Error(msg); // 👈 throw a clear message
   }
 };
+
+
 export const getAllUserData = async () => {
   try {
     const res = await axiosBaseUrl.get("/admin/data");

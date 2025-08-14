@@ -4,6 +4,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
+import { HashLink } from "react-router-hash-link";
 
 // Common animation variants
 const fadeUp = {
@@ -39,6 +40,16 @@ const slides = [
 
 const Banner = () => {
   return (
+
+    //  <HashLink
+    //               key={item.label}
+    //               smooth
+    //               to={item.to}
+    //               className="text-gray-700 hover:text-indigo-600 transition-colors"
+    //             >
+    //               {item.label}
+    //             </HashLink>
+
     <section
     id="hero" 
     className="relative h-[70vh] sm:h-[80vh] w-full overflow-hidden">
@@ -103,7 +114,14 @@ const Banner = () => {
                   initial="hidden"
                   animate="show"
                 >
+                    <HashLink
+                  smooth
+                  to="/#about"
+                  className="text-gray-700 hover:text-indigo-600 transition-colors"
+                >
                   Learn More
+                </HashLink>
+
                 </motion.a>
               </motion.div>
             </div>

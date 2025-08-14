@@ -90,16 +90,20 @@ const AdminDashboard = () => {
                     <TableCell><strong>Phone</strong></TableCell>
                     <TableCell><strong>Email</strong></TableCell>
                     <TableCell><strong>Date</strong></TableCell>
+                    <TableCell><strong>Num of peaple</strong></TableCell>
+                    <TableCell><strong>Message</strong></TableCell>
                     <TableCell><strong>Submitted At</strong></TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {submissions.map((entry) => (
-                    <TableRow key={entry.id}>
+                    <TableRow key={entry._id}>
                       <TableCell>{entry.name}</TableCell>
                       <TableCell>{entry.phone}</TableCell>
                       <TableCell>{entry.email}</TableCell>
                       <TableCell>{entry.date}</TableCell>
+                      <TableCell>{entry.numberOfPeaople}</TableCell>
+                      <TableCell>{entry.message}</TableCell>
                       <TableCell>
                         {new Date(entry.submittedAt).toLocaleString()}
                       </TableCell>

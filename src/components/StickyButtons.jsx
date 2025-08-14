@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Phone, MessageCircle } from "lucide-react"; // icons
+import { FaWhatsapp } from "react-icons/fa";
 
 const StickyButtons = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const StickyButtons = () => {
         rel="noopener noreferrer"
         className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-md flex items-center justify-center"
       >
-        <MessageCircle size={22} />
+        <FaWhatsapp size={24} />
       </a>
     </div>
   );

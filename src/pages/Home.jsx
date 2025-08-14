@@ -13,6 +13,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import GallerySection from "./galleryImages";
 import ContactPage from "./ContactPage";
+import DevDeepawaliInfo from "../components/DevDeepawaliInfo";
+import CustomPlanSection from "./ContactPage";
 
 const Home = () => {
   const [showCTA, setShowCTA] = useState(false);
@@ -29,10 +31,11 @@ const Home = () => {
     <div>
       <Navbar />
       <Banner />
+      <DevDeepawaliInfo />
       <Itinerary />
       <PackageInclusion  />
-      <OtherPackages />
       <GallerySection />
+      <OtherPackages />
       <StickyButtons />
       <FAQ />
       <ReviewsCarousel />
