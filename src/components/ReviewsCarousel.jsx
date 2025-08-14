@@ -48,16 +48,7 @@ const ReviewsCarousel = () => {
 </p>
 
 {/* Google Business Link */}
-<div className="text-center mb-10">
-  <a
-    href="https://www.google.com/maps/place/KASHI+TRIPS+-+Best+Tour+%26+Travels+Agency+%7C+Travel+Agent+%7C+Tour+Operator+in+Varanasi,+INDIA/@25.364127,83.001893,16z/data=!4m6!3m5!1s0x398e2f913ecb584d:0x7a6d0685ecfe441e!8m2!3d25.3641273!4d83.0018926!16s%2Fg%2F11s42mllmy?entry=tts&g_ep=EgoyMDI1MDgxMC4wIPu8ASoASAFQAw%3D%3D&skid=74272754-d035-476e-94ef-227ca90c58e1"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-medium px-5 py-2 rounded-full shadow-lg transition"
-  >
-    ⭐ Read More Reviews on Google
-  </a>
-</div>
+
 
 
         <Swiper
@@ -113,6 +104,16 @@ const ReviewsCarousel = () => {
               </motion.div>
             </SwiperSlide>
           ))}
+          <div className="text-center mb-10">
+  <a
+    href="https://www.google.com/maps/place/KASHI+TRIPS+-+Best+Tour+%26+Travels+Agency+%7C+Travel+Agent+%7C+Tour+Operator+in+Varanasi,+INDIA/@25.364127,83.001893,16z/data=!4m6!3m5!1s0x398e2f913ecb584d:0x7a6d0685ecfe441e!8m2!3d25.3641273!4d83.0018926!16s%2Fg%2F11s42mllmy?entry=tts&g_ep=EgoyMDI1MDgxMC4wIPu8ASoASAFQAw%3D%3D&skid=74272754-d035-476e-94ef-227ca90c58e1"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-8 inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-medium px-5 py-2 rounded-full shadow-lg transition"
+  >
+    ⭐ Read More Reviews on Google
+  </a>
+</div>
         </Swiper>
       </div>
     </section>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import CTAForm from "./CTAForm";
+import ContactModal from "./ContactModal";
 
 const packages = [
   {
@@ -46,21 +47,8 @@ const fadeUp = {
 
 const OtherPackages = () => {
   
-    const [showCTA, setShowCTA] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleEnquireClick = () => {
-    setShowCTA(true);
-    // Optional: scroll to form smoothly
-    setTimeout(() => {
-      document.querySelector("#ctaForm")?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Thank you for your enquiry!");
-    setShowCTA(false);
-  };
 
   return (
     <section
@@ -101,7 +89,7 @@ const OtherPackages = () => {
                   {pkg.title}
                 </h3>
                 <button
-                  onClick={handleEnquireClick}
+                  onClick={()=>setIsModalOpen(true)}
                   className="bg-[var(--accent-color,#facc15)] text-gray-900 px-4 py-2 rounded-md text-sm font-medium hover:bg-[var(--primary-color,#1e3a8a)] hover:text-white transition"
                 >
                   Enquire Now
@@ -111,20 +99,11 @@ const OtherPackages = () => {
           ))}
         </div>
 
-       {showCTA && (
-        <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-md w-full bg-white rounded-lg shadow-lg p-6">
-            <button
-              onClick={() => setShowCTA(false)}
-              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl font-bold"
-              aria-label="Close"
-            >
-              &times;
-            </button>
-            <CTAForm />
-          </div>
-        </div>
-      )}
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+
       </div>
     </section>
   );

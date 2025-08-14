@@ -39,7 +39,7 @@ const DevDeepawaliInfo = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="max-w-4xl mx-auto shadow-2xl rounded-3xl p-8 border border-yellow-300"
+      className="max-w-4xl my-4 mx-auto shadow-2xl rounded-3xl p-8 border border-yellow-300"
     >
       {sections.map((sec, idx) => (
         <div key={idx} className="mb-6">
