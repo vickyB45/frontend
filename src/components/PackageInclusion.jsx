@@ -33,12 +33,9 @@ const fadeUp = {
   }),
 };
 
-const 
-
-PackageInclusion = () => {
+const PackageInclusion = () => {
   return (
-    <section
-    className="py-6 bg-gradient-to-b from-white to-gray-50 px-4">
+    <section className="py-2 bg-gradient-to-b from-white to-gray-50 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
           className="text-3xl md:text-4xl font-bold mb-12 text-[var(--primary-color,#1e3a8a)]"
@@ -53,7 +50,7 @@ PackageInclusion = () => {
           {inclusions.map((item, index) => (
             <motion.div
               key={index}
-              className="bg-white cursor-pointer px-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col items-center gap-4"
+              className="bg-white cursor-pointer p-4 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col items-center gap-4"
               variants={fadeUp}
               custom={index * 0.15}
               initial="hidden"
@@ -71,8 +68,6 @@ PackageInclusion = () => {
             </motion.div>
           ))}
         </div>
-
-      
       </div>
     </section>
   );

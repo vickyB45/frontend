@@ -34,6 +34,13 @@ const reviews = [
     date: "Nov 2024",
     image: "https://i.pinimg.com/736x/2f/46/d5/2f46d594fb140b5fa75eff67802c064b.jpg",
   },
+  {
+    name: "Isha Sharma",
+    rating: 5,
+    comment: "I recently booked a trip with Kashi Trip Travel Agency and I couldn't be happier with their service.",
+    date: "jan 2024",
+    image: "https://lh3.googleusercontent.com/a/ACg8ocLppsln3zACKYvs7xwKDn8g4ezGfNjTsd7KVRDVvKb1ZXpuEg=w43-h43-p-rp-mo-br100",
+  },
 ];
 
 const ReviewsCarousel = () => {
@@ -70,7 +77,7 @@ const ReviewsCarousel = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className=" rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all h-full flex flex-col border border-gray-100"
+                className=" rounded-2xl p-6 cursor-grab active:cursor-grabbing shadow-lg hover:shadow-2xl transition-all h-full flex flex-col border border-gray-100"
               >
                 {/* User Info */}
                 <div className="flex items-center gap-4 mb-4">

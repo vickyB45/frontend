@@ -46,11 +46,8 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
           <div className="flex gap-4 text-xl">
-            <a href="#" className="hover:text-blue-400">
+            <a href="https://www.facebook.com/people/KASHI-TRIPS/100083009542231/?mibextid=ZbWKwL" target="_blank" className="hover:text-blue-400">
               <FaFacebookF />
-            </a>
-            <a href="#" className="hover:text-pink-400">
-              <FaInstagram />
             </a>
             <a
               href="https://wa.me/919569275026"

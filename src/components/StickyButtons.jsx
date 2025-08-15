@@ -13,7 +13,9 @@ const StickyButtons = () => {
         href="tel:+919569275026"
         className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-md flex items-center justify-center"
       >
-        <Phone size={22} />
+          <div className="phone-wrapper">
+      <Phone size={22} className="phone-icon" />
+    </div>
       </a>
 
       {/* Chat (WhatsApp) */}

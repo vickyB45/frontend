@@ -5,15 +5,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
 import { HashLink } from "react-router-hash-link";
+import { useState } from "react";
+import CTAForm from "./CTAForm";
+
+// Framer Motion + HashLink combine
+const MotionHashLink = motion(HashLink);
 
 // Common animation variants
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
-  show: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay, duration: 0.8, ease: "easeOut" },
-  }),
+  show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 };
 
 // Slides data
@@ -39,24 +40,19 @@ const slides = [
 ];
 
 const Banner = () => {
+
+  
+    const [showCTA, setShowCTA] = useState(false);
+
   return (
-
-    //  <HashLink
-    //               key={item.label}
-    //               smooth
-    //               to={item.to}
-    //               className="text-gray-700 hover:text-indigo-600 transition-colors"
-    //             >
-    //               {item.label}
-    //             </HashLink>
-
     <section
-    id="hero" 
-    className="relative h-[70vh] sm:h-[80vh] w-full overflow-hidden">
+      id="hero"
+      className="relative h-[70vh] sm:h-[80vh] w-full overflow-hidden cursor-grab active:cursor-grabbing"
+    >
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 4000 }}
-        loop={true}
+        loop={slides.length > 1} // loop sirf tab jab slides zyada ho
         pagination={{ clickable: true }}
         className="h-full"
       >
@@ -67,11 +63,9 @@ const Banner = () => {
               <img
                 src={slide.img}
                 alt={slide.title}
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover "
                 loading={index === 0 ? "eager" : "lazy"}
                 fetchPriority={index === 0 ? "high" : "auto"}
-
-
               />
 
               {/* Overlay */}
@@ -86,7 +80,7 @@ const Banner = () => {
                 animate="show"
               >
                 <motion.h1
-                  className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]"
+                  className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]"
                   variants={fadeUp}
                   custom={0.2}
                   initial="hidden"
@@ -106,43 +100,52 @@ const Banner = () => {
                 </motion.p>
 
                 {/* CTA Button */}
-                <motion.a
-                  href={slide.cta}
+                <MotionHashLink
+                  smooth
+                  onClick={()=>setShowCTA(true)}
                   className="inline-block mt-5 px-5 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 transition"
                   variants={fadeUp}
                   custom={0.6}
                   initial="hidden"
                   animate="show"
                 >
-                    <HashLink
-                  smooth
-                  to="/#about"
-                  className="text-gray-700 hover:text-indigo-600 transition-colors"
-                >
                   Learn More
-                </HashLink>
-
-                </motion.a>
+                </MotionHashLink>
               </motion.div>
             </div>
           </SwiperSlide>
         ))}
+
+
       </Swiper>
+       {showCTA && (
+        <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
+          <div className="relative max-w-md w-full bg-white rounded-lg shadow-lg p-6">
+            <button
+              onClick={() => setShowCTA(false)}
+              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl font-bold"
+              aria-label="Close"
+            >
+              &times;
+            </button>
+            <CTAForm />
+          </div>
+        </div>
+      )}
 
       {/* Custom pagination style */}
       <style>
-  {`
-    .swiper-pagination-bullet {
-      background: white !important;
-      opacity: 0.7;
-    }
-    .swiper-pagination-bullet-active {
-      background: #facc15 !important;
-      opacity: 1;
-    }
-  `}
-</style>
-
+        {`
+          .swiper-pagination-bullet {
+            background: white !important;
+            opacity: 0.7;
+          }
+          .swiper-pagination-bullet-active {
+            background: #facc15 !important;
+            opacity: 1;
+          }
+        `}
+      </style>
     </section>
   );
 };
