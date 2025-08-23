@@ -1,10 +1,14 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { motion } from "framer-motion";
-import { sendEnquery } from "../api/api";
+import { sendEnquery, sendMailToAdmin } from "../api/api";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CTAForm = () => {
+
+const navigate = useNavigate()
+
   const today = new Date().toISOString().split("T")[0];
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -22,7 +26,9 @@ const CTAForm = () => {
     try {
       setIsLoading(true);
       await sendEnquery(values);
+      await sendMailToAdmin(values)
       setMessage("✅ Thanks! We'll contact you shortly.");
+      navigate('/thanks')
       resetForm();
       setIsLoading(false);
     } catch (error) {

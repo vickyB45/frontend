@@ -9,14 +9,14 @@ export default function ThankYouPage() {
 
       <h1 className="text-3xl sm:text-5xl font-semibold mb-2">
         Thank you for choosing{" "}
-        <span className="text-orange-500 font-bold">Kashitrips.com</span>
+        <span className="text-yellow-500 font-bold">Kashitrips.com</span>
       </h1>
 
-      <div className="w-20 border-t-4 border-orange-500 rounded-full my-4"></div>
+      <div className="w-20 border-t-4 border-yellow-500 rounded-full my-4"></div>
 
       <p className="text-lg text-gray-700 mb-6">
         For immediate assistance, you can{" "}
-        <span className="text-orange-500 font-semibold">Call</span> our sales
+        <span className="text-yellow-500 font-semibold">Call</span> our sales
         team at,
       </p>
 
@@ -45,7 +45,7 @@ export default function ThankYouPage() {
       {/* Back to Home Button */}
       <Link
         to="/"
-        className="mt-10 px-6 py-2 bg-orange-500 text-white rounded-md shadow hover:bg-orange-600 transition"
+        className="mt-10 px-6 py-2 bg-yellow-500 text-white rounded-md shadow hover:bg-yellow-600 transition"
       >
         Back to Home
       </Link>

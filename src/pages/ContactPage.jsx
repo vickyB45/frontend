@@ -30,6 +30,7 @@ const CustomPlanSection = () => {
         Contact Us →
       </button>
        <ContactModal
+     
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />

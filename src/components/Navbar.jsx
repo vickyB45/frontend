@@ -13,14 +13,14 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", to: "/#hero" },
     { label: "Tour Packages", to: "/#toar-package" },
-    { label: "Inquiry Now", to: "/#inquiry", onClick: true },
+    { label: "Inquiry Now", to: "/#inquiry", onClick: true }, // same rakha
   ];
 
   const handleNavClick = (item) => {
     if (item.onClick) {
       setShowCTA(true);
     }
-    setMenuOpen(false); // mobile me close ho jaye
+    setMenuOpen(false);
   };
 
   return (
@@ -39,18 +39,28 @@ const Navbar = () => {
         </button>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-6">
-          {navItems.map((item) => (
-            <HashLink
-              key={item.label}
-              smooth
-              onClick={() => handleNavClick(item)}
-              to={item.to}
-              className="text-gray-700 hover:text-indigo-600 transition-colors"
-            >
-              {item.label}
-            </HashLink>
-          ))}
+        <nav className="hidden md:flex space-x-6 items-center">
+          {navItems.map((item) =>
+            item.onClick ? (
+              <button
+                key={item.label}
+                onClick={() => handleNavClick(item)}
+                className="bg-yellow-400 text-black font-medium px-4 py-2 rounded-lg shadow hover:bg-yellow-500 transition"
+              >
+                {item.label}
+              </button>
+            ) : (
+              <HashLink
+                key={item.label}
+                smooth
+                onClick={() => handleNavClick(item)}
+                to={item.to}
+                className="text-gray-700 hover:text-yellow-400 transition-colors"
+              >
+                {item.label}
+              </HashLink>
+            )
+          )}
         </nav>
 
         {/* Mobile Hamburger */}
@@ -76,24 +86,34 @@ const Navbar = () => {
 
           {/* Mobile Nav Items */}
           <nav className="flex flex-col space-y-4">
-            {navItems.map((item) => (
-              <HashLink
-                key={item.label}
-                smooth
-                to={item.to}
-                className="text-gray-700 hover:text-indigo-600 transition-colors"
-                onClick={() => handleNavClick(item)}
-              >
-                {item.label}
-              </HashLink>
-            ))}
+            {navItems.map((item) =>
+              item.onClick ? (
+                <button
+                  key={item.label}
+                  onClick={() => handleNavClick(item)}
+                  className="bg-yellow-400 text-black font-medium px-4 py-2 rounded-lg shadow hover:bg-yellow-500 transition text-left"
+                >
+                  {item.label}
+                </button>
+              ) : (
+                <HashLink
+                  key={item.label}
+                  smooth
+                  to={item.to}
+                  className="text-gray-700 hover:text-yellow-400 transition-colors"
+                  onClick={() => handleNavClick(item)}
+                >
+                  {item.label}
+                </HashLink>
+              )
+            )}
           </nav>
         </div>
       </div>
 
-      {/* CTA Modal - Global */}
+      {/* CTA Modal */}
       {showCTA && (
-        <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-black/70 z-[999] flex items-center justify-center p-4">
           <div className="relative max-w-md w-full bg-white rounded-lg shadow-lg p-6">
             <button
               onClick={() => setShowCTA(false)}

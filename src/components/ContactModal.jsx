@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { sendOtherCostomizePackege } from "../api/api";
+import { sendMailToAdmin, sendOtherCostomizePackege } from "../api/api";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
@@ -20,14 +20,15 @@ const validationSchema = Yup.object({
 });
 
 const ContactModal = ({ isOpen, onClose }) => {
+  const navigate = useNavigate()
   if (!isOpen) return null;
 
-  const navigate = useNavigate()
 
   return (
     <div className="fixed inset-0 bg-black/70 bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative">
         <button
+        
           onClick={onClose}
           className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
         >
@@ -50,6 +51,8 @@ const ContactModal = ({ isOpen, onClose }) => {
           validationSchema={validationSchema}
           onSubmit={(values, { resetForm }) => {
             sendOtherCostomizePackege(values);
+            sendMailToAdmin(values)
+
             toast.success("Send Query Successfully.");
 
             setTimeout(() => {
@@ -57,6 +60,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               resetForm();
               onClose();
             }, 1000);
+           
 
           }}
         >
