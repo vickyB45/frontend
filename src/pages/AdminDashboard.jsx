@@ -47,7 +47,7 @@ const AdminDashboard = () => {
   return (
     <Box sx={{ minHeight: "100vh", bgcolor: "#f9f9f9" }}>
       {/* AppBar */}
-      <AppBar position="static" sx={{ bgcolor: "#1976d2" }}>
+      <AppBar className="sticky top-0" sx={{ bgcolor: "#1976d2" }}>
         <Toolbar
           sx={{
             display: "flex",
@@ -71,7 +71,7 @@ const AdminDashboard = () => {
       </AppBar>
 
       {/* Content */}
-      <Container maxWidth="lg" sx={{ py: 4 }}>
+      <Container className="mt-10" maxWidth="lg" sx={{ py: 4 }}>
         {loading ? (
           <Box sx={{ textAlign: "center", mt: 8 }}>
             <CircularProgress />

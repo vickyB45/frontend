@@ -58,6 +58,15 @@ const Footer = () => {
             >
               <FaWhatsapp />
             </a>
+           <a
+  href="https://www.instagram.com/tripskashi/?next=%2F"
+  target="_blank"
+  rel="noreferrer"
+  className=" hover:text-pink-400"
+>
+  <FaInstagram />
+</a>
+
           </div>
         </div>
 

@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { motion } from "framer-motion";
-import { sendEnquery, sendMailToAdmin } from "../api/api";
+import { sendMailToAdmin, sendOtherCostomizePackege } from "../api/api";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -25,7 +25,7 @@ const navigate = useNavigate()
   const handleSubmit = async (values, { resetForm }) => {
     try {
       setIsLoading(true);
-      await sendEnquery(values);
+      await sendOtherCostomizePackege(values);
       await sendMailToAdmin(values)
       setMessage("✅ Thanks! We'll contact you shortly.");
       navigate('/thanks')

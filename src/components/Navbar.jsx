@@ -1,6 +1,6 @@
 // Navbar.jsx
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Hash, Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import CTAForm from "./CTAForm";
@@ -27,18 +27,23 @@ const Navbar = () => {
     <header className="sticky top-0 bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
         {/* Logo */}
+        <HashLink
+        smooth
+          onClick={() => handleNavClick()}
+          >
+        
         <button
-          onClick={() => navigate("/")}
           className="text-xl font-bold text-indigo-700"
         >
           <img
             src="https://kashitrips.com/wp-content/uploads/2023/08/Kashi-trips-trip-to-kashi-website-logo.webp"
             alt="Kashi Trips Logo"
-            className="h-16 ml-8 w-auto object-contain"
-            onClick={()=>window.location.reload()}
+            className="cursor-pointer h-16 ml-8 w-auto object-contain"
+          
           />
         </button>
 
+          </HashLink>
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6 items-center">
           {navItems.map((item) =>
@@ -65,12 +70,19 @@ const Navbar = () => {
         </nav>
 
         {/* Mobile Hamburger */}
+        <div className="flex md:hidden"> <button
+                onClick={() => handleNavClick(item)}
+                className="bg-yellow-400 text-xs block md:hidden text-black font-medium px-4 py-2 rounded-lg shadow hover:bg-yellow-500 transition"
+              >
+               Inquery Now
+              </button>
         <button
           className="md:hidden p-2 text-gray-700"
           onClick={() => setMenuOpen(true)}
         >
           <Menu size={24} />
-        </button>
+        </button></div>
+       
       </div>
 
       {/* Mobile Menu Drawer */}

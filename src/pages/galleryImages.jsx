@@ -8,31 +8,31 @@ const galleryImages = [
     alt: "Thousands of diyas on the ghats of Varanasi",
   },
   {
-    src: "https://i.postimg.cc/151Q3WRK/1.png",
+    src: "https://i.pinimg.com/736x/16/ee/49/16ee49fd1f421f4e69424d85b86a124c.jpg",
     alt: "Aarti ceremony during Dev Deepawali",
   },
   {
-     src: "https://i.postimg.cc/wT5dyh7Y/2.png",
+     src: "https://static.toiimg.com/photo/115340033.cms",
     alt: "Boat ride with glowing ghats in background",
   },
   {
-     src: "https://i.postimg.cc/xCNw0mW7/3.png",
+     src: "https://static.wixstatic.com/media/f31e44_d008579e635b49599a1108c7fc1fec6c~mv2.jpg/v1/fill/w_980%2Ch_653%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/f31e44_d008579e635b49599a1108c7fc1fec6c~mv2.jpg",
     alt: "Crowds enjoying the festive lights",
   },
   {
-     src: "https://i.postimg.cc/rFNvFMP8/4.png",
+     src: "https://www.varanasiguru.com/wp-content/uploads/2024/10/Dev-Diwali-Varanasi-Best-Ghat-Top-Attractions-Things-to-do-Dev-Diwali-Booking5.jpg",
     alt: "Dashashwamedh Ghat fully illuminated",
   },
   {
-     src: "https://i.postimg.cc/CxvXkJ0X/5.png",
+     src: "https://static.wixstatic.com/media/f31e44_64fb3594aab147378512d9e454e44a64~mv2.jpg/v1/fill/w_980%2Ch_653%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/f31e44_64fb3594aab147378512d9e454e44a64~mv2.jpg",
     alt: "Close-up of diyas during Dev Deepawali",
   },
   {
-     src: "https://i.postimg.cc/PJzFxQK6/6.png",
+     src: "https://cf-img-a-in.tosshub.com/sites/visualstory/wp/2023/11/PTI11_27_2023_000282A-scaled.jpg?size=%2A%3A900",
     alt: "Aerial view of Varanasi ghats lit with lamps",
   },
   {
-     src: "https://i.postimg.cc/Pqp3Zj2v/7.png",
+     src: "https://static2.tripoto.com/media/filter/tst/img/1322504/TripDocument/1564077275_1564077254489.jpg",
     alt: "Spiritual vibes at the Ganga river",
   },
 ];

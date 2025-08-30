@@ -20,13 +20,13 @@ const fadeUp = {
 // Slides data
 const slides = [
   {
-    img: "https://i.postimg.cc/PJtCGd7C/dev1.png",
+    img: "/image/dev1.svg",
     title: "Experience Dev Deepawali",
     desc: "Witness the spiritual magic of Varanasi, where the ghats shine with thousands of diyas and the air echoes with devotion.",
     cta: "/dev-deepawali",
   },
   {
-    img: "https://i.postimg.cc/02Xb3R0N/dev2.png",
+    img: "/image/dev2.svg",
     title: "A Night of a Million Lamps",
     desc: "Watch the Ganga glow under starlight as priests perform the grand Aarti with chants and conch shells.",
     cta: "/dev-deepawali",
