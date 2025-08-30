@@ -8,31 +8,31 @@ const galleryImages = [
     alt: "Thousands of diyas on the ghats of Varanasi",
   },
   {
-    src: "/image/gallery/1.png",
+    src: "https://i.postimg.cc/151Q3WRK/1.png",
     alt: "Aarti ceremony during Dev Deepawali",
   },
   {
-     src: "/image/gallery/2.png",
+     src: "https://i.postimg.cc/wT5dyh7Y/2.png",
     alt: "Boat ride with glowing ghats in background",
   },
   {
-     src: "/image/gallery/3.png",
+     src: "https://i.postimg.cc/xCNw0mW7/3.png",
     alt: "Crowds enjoying the festive lights",
   },
   {
-     src: "/image/gallery/4.png",
+     src: "https://i.postimg.cc/rFNvFMP8/4.png",
     alt: "Dashashwamedh Ghat fully illuminated",
   },
   {
-     src: "/image/gallery/5.png",
+     src: "https://i.postimg.cc/CxvXkJ0X/5.png",
     alt: "Close-up of diyas during Dev Deepawali",
   },
   {
-     src: "/image/gallery/6.png",
+     src: "https://i.postimg.cc/PJzFxQK6/6.png",
     alt: "Aerial view of Varanasi ghats lit with lamps",
   },
   {
-     src: "/image/gallery/7.png",
+     src: "https://i.postimg.cc/Pqp3Zj2v/7.png",
     alt: "Spiritual vibes at the Ganga river",
   },
 ];

@@ -13,7 +13,7 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", to: "/#hero" },
     { label: "Tour Packages", to: "/#toar-package" },
-    { label: "Inquiry Now", to: "/#inquiry", onClick: true }, // same rakha
+    { label: "Inquiry Now", to: "/#inquiry", onClick: true }, 
   ];
 
   const handleNavClick = (item) => {
@@ -32,9 +32,10 @@ const Navbar = () => {
           className="text-xl font-bold text-indigo-700"
         >
           <img
-            src="https://lp.kashitrips.com/wp-content/uploads/2025/06/Kashi-trips-trip-to-kashi-website-logo-1.webp"
+            src="https://kashitrips.com/wp-content/uploads/2023/08/Kashi-trips-trip-to-kashi-website-logo.webp"
             alt="Kashi Trips Logo"
-            className="h-20 w-auto object-contain"
+            className="h-16 ml-8 w-auto object-contain"
+            onClick={()=>window.location.reload()}
           />
         </button>
 

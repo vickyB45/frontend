@@ -2,13 +2,14 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F0B100] text-white pt-12 pb-6">
+    <footer className="bg-black text-white pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         
         {/* Brand Info */}
         <div>
-          <h2 className="text-2xl font-bold mb-3">KashiTrip</h2>
-          <p className="text-sm text-black leading-relaxed">
+          {/* <h2 className="text-2xl font-bold mb-3">KashiTrips</h2> */}
+          <img className="mb-5" src="https://kashitrips.com/wp-content/uploads/2023/08/Kashi-Trips-1.png" alt="" />
+          <p className="text-sm text-gray-300 leading-relaxed">
             Kashi Trips Tour & Travels is one of the most trusted travel companies, 
             delivering unforgettable memories to guests with exceptional service.
           </p>
@@ -17,7 +18,7 @@ const Footer = () => {
         {/* Contact Info */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Contact Us</h3>
-          <ul className="text-sm text-black space-y-2">
+          <ul className="text-sm text-gray-300 space-y-2">
             <li>
               SA 4/184, Basant Vihar Colony, Pandeypur, Paharia, Varanasi
             </li>
@@ -45,7 +46,7 @@ const Footer = () => {
         {/* Social Links */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
-          <div className="flex gap-4 text-xl text-black">
+          <div className="flex gap-4 text-xl text-gray-300">
             <a href="https://www.facebook.com/people/KASHI-TRIPS/100083009542231/?mibextid=ZbWKwL" target="_blank" className="hover:text-blue-400">
               <FaFacebookF />
             </a>
@@ -79,7 +80,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="text-center text-black text-sm mt-10 border-t border-gray-700 pt-4">
+      <div className="text-center text-gray-300 text-sm mt-10 border-t border-gray-700 pt-4">
         © {new Date().getFullYear()} Kashi Trips. All rights reserved.
       </div>
     </footer>
