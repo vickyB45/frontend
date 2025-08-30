@@ -71,7 +71,7 @@ const Navbar = () => {
 
         {/* Mobile Hamburger */}
         <div className="flex md:hidden"> <button
-                onClick={() => handleNavClick(item)}
+                onClick={() =>setShowCTA(true)}
                 className="bg-yellow-400 text-xs block md:hidden text-black font-medium px-4 py-2 rounded-lg shadow hover:bg-yellow-500 transition"
               >
                Inquery Now
