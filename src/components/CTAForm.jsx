@@ -1,13 +1,17 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { motion } from "framer-motion";
-import { sendMailToAdmin, sendOtherCostomizePackege } from "../api/api";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSendEnquery } from "../hooks/sendEnquery";
+import { useSendMail } from "../hooks/sendMail";
 
 const CTAForm = () => {
 
-const navigate = useNavigate()
+  const { mutate:sendEnquery } = useSendEnquery()
+  const { mutate:sendMail } = useSendMail()
+
+  const navigate = useNavigate()
 
   const today = new Date().toISOString().split("T")[0];
   const [message, setMessage] = useState("");
@@ -25,8 +29,8 @@ const navigate = useNavigate()
   const handleSubmit = async (values, { resetForm }) => {
     try {
       setIsLoading(true);
-      await sendOtherCostomizePackege(values);
-      await sendMailToAdmin(values)
+      sendEnquery(values);
+       sendMail(values)
       setMessage("✅ Thanks! We'll contact you shortly.");
       navigate('/thanks')
       resetForm();
@@ -67,6 +71,8 @@ const navigate = useNavigate()
             }}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
+            validateOnChange={false}   
+            validateOnBlur={true}
           >
             <Form className="space-y-4">
               {/* Name */}

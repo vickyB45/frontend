@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 export default function ThankYouPage() {
+  const navigate = useNavigate()
   return (
     <>
     <Navbar/>
@@ -43,12 +44,12 @@ export default function ThankYouPage() {
       </p>
 
       {/* Back to Home Button */}
-      <Link
-        to="/"
+      <div
+      onClick={()=>navigate('/')}
         className="mt-10 px-6 py-2 bg-yellow-500 text-white rounded-md shadow hover:bg-yellow-600 transition"
       >
         Back to Home
-      </Link>
+      </div>
     </div>
     
     </>

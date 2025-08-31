@@ -13,7 +13,7 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", to: "/#hero" },
     { label: "Tour Packages", to: "/#toar-package" },
-    { label: "Inquiry Now", to: "/#inquiry", onClick: true }, 
+    { label: "Enquiry Now", to: "/#inquiry", onClick: true }, 
   ];
 
   const handleNavClick = (item) => {
@@ -29,7 +29,10 @@ const Navbar = () => {
         {/* Logo */}
         <HashLink
         smooth
-          onClick={() => handleNavClick()}
+          onClick={() => {
+            navigate("/")
+            window.scrollTo({top:0,behavior:smooth})
+          }}
           >
         
         <button
@@ -74,14 +77,9 @@ const Navbar = () => {
                 onClick={() =>setShowCTA(true)}
                 className="bg-yellow-400 text-xs block md:hidden text-black font-medium px-4 py-2 rounded-lg shadow hover:bg-yellow-500 transition"
               >
-               Inquery Now
+               Enquiry Now
               </button>
-        <button
-          className="md:hidden p-2 text-gray-700"
-          onClick={() => setMenuOpen(true)}
-        >
-          <Menu size={24} />
-        </button></div>
+       </div>
        
       </div>
 
@@ -98,29 +96,7 @@ const Navbar = () => {
           </button>
 
           {/* Mobile Nav Items */}
-          <nav className="flex flex-col space-y-4">
-            {navItems.map((item) =>
-              item.onClick ? (
-                <button
-                  key={item.label}
-                  onClick={() => handleNavClick(item)}
-                  className="bg-yellow-400 text-black font-medium px-4 py-2 rounded-lg shadow hover:bg-yellow-500 transition text-left"
-                >
-                  {item.label}
-                </button>
-              ) : (
-                <HashLink
-                  key={item.label}
-                  smooth
-                  to={item.to}
-                  className="text-gray-700 hover:text-yellow-400 transition-colors"
-                  onClick={() => handleNavClick(item)}
-                >
-                  {item.label}
-                </HashLink>
-              )
-            )}
-          </nav>
+         
         </div>
       </div>
 
