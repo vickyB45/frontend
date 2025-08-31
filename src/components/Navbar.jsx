@@ -41,7 +41,7 @@ const Navbar = () => {
           <img
             src="https://kashitrips.com/wp-content/uploads/2023/08/Kashi-trips-trip-to-kashi-website-logo.webp"
             alt="Kashi Trips Logo"
-            className="cursor-pointer h-16 ml-8 w-auto object-contain"
+            className="cursor-pointer h-16 md:ml-8 w-auto object-contain"
           
           />
         </button>

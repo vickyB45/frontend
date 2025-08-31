@@ -8,7 +8,10 @@ const Footer = () => {
         {/* Brand Info */}
         <div>
           {/* <h2 className="text-2xl font-bold mb-3">KashiTrips</h2> */}
-          <img className="mb-5" src="https://kashitrips.com/wp-content/uploads/2023/08/Kashi-Trips-1.png" alt="" />
+         <div>
+           <img  className="mb-5 md:h-22 h-14" src="https://kashitrips.com/wp-content/uploads/2023/08/Kashi-Trips-1.png" alt="" />
+         
+         </div>
           <p className="text-sm text-gray-300 leading-relaxed">
             Kashi Trips Tour & Travels is one of the most trusted travel companies, 
             delivering unforgettable memories to guests with exceptional service.
