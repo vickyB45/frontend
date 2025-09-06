@@ -20,7 +20,7 @@ const fadeUp = {
 // Slides data
 const slides = [
   {
-    img: "https://i.postimg.cc/NGV3Pdrc/dev3.png",
+    img: "https://kashi.gov.in/cmsadmin/storage/CMS/65d2eb287c02a1708321576.jpg",
     title: "Sacred Vibes, Divine Light",
     desc: "Feel the peace, power, and purity of Kashi during its most vibrant and soulful celebration.",
     cta: "/dev-deepawali",
