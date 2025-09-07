@@ -20,20 +20,20 @@ const fadeUp = {
 // Slides data
 const slides = [
   {
-    img: "https://kashi.gov.in/cmsadmin/storage/CMS/65d2eb287c02a1708321576.jpg",
+    img: "image/1.jpeg",
     title: "Sacred Vibes, Divine Light",
     desc: "Feel the peace, power, and purity of Kashi during its most vibrant and soulful celebration.",
     cta: "/dev-deepawali",
   },
   {
-    img: "/image/dev2.svg",
+    img: "image/2.jpeg",
     title: "A Night of a Million Lamps",
     desc: "Watch the Ganga glow under starlight as priests perform the grand Aarti with chants and conch shells.",
     cta: "/dev-deepawali",
   },
- 
-   {
-    img: "/image/dev1.svg",
+  
+  {
+    img: "image/3.jpeg",
     title: "Experience Dev Deepawali",
     desc: "Witness the spiritual magic of Varanasi, where the ghats shine with thousands of diyas and the air echoes with devotion.",
     cta: "/dev-deepawali",
