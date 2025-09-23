@@ -21,15 +21,17 @@ const fadeUp = {
 const slides = [
   {
     img: "image/1.jpeg",
-    title: "Sacred Vibes, Divine Light",
+    title: " Celebrate Dev Deepawali in Varanasi  with Flash Deals You Can’t Miss!",
     desc: "Feel the peace, power, and purity of Kashi during its most vibrant and soulful celebration.",
     cta: "/dev-deepawali",
+    uniq:true
   },
   {
     img: "image/2.jpeg",
     title: "A Night of a Million Lamps",
     desc: "Watch the Ganga glow under starlight as priests perform the grand Aarti with chants and conch shells.",
     cta: "/dev-deepawali",
+    uniq:false
   },
   
   {
@@ -37,6 +39,7 @@ const slides = [
     title: "Experience Dev Deepawali",
     desc: "Witness the spiritual magic of Varanasi, where the ghats shine with thousands of diyas and the air echoes with devotion.",
     cta: "/dev-deepawali",
+    uniq:false
   },
 ];
 
@@ -52,7 +55,7 @@ const Banner = () => {
     >
       <Swiper
         modules={[Autoplay, Pagination]}
-        autoplay={{ delay: 4000 }}
+        autoplay={{ delay: 6000 }}
         loop={slides.length > 1} // loop sirf tab jab slides zyada ho
         pagination={{ clickable: true }}
         className="h-full"
@@ -81,7 +84,7 @@ const Banner = () => {
                 animate="show"
               >
                 <motion.h1
-                  className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]"
+                  className={` ${!slide.uniq ? "text-2xl sm:text-3xl md:text-4xl": "text-lg sm:text-xl md:text-2xl"}  font-extrabold text-white tracking-tight mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]`}
                   variants={fadeUp}
                   custom={0.2}
                   initial="hidden"
@@ -91,7 +94,7 @@ const Banner = () => {
                 </motion.h1>
 
                 <motion.p
-                  className="text-sm sm:text-base md:text-lg text-gray-100 leading-relaxed max-w-xl mx-auto"
+                  className={`${!slide.uniq ? "text-sm": "text-xs"}  sm:text-base md:text-lg text-gray-100 leading-relaxed max-w-xl mx-auto`}
                   variants={fadeUp}
                   custom={0.4}
                   initial="hidden"
@@ -110,7 +113,7 @@ const Banner = () => {
                   initial="hidden"
                   animate="show"
                 >
-                  Learn More
+                  Book Now
                 </MotionHashLink>
               </motion.div>
             </div>

@@ -35,7 +35,7 @@ const ContactModal = ({ isOpen, onClose }) => {
           ✕
         </button>
 
-        <h2 className="text-2xl font-bold text-purple-700 mb-4 text-center">
+        <h2 className="text-2xl font-bold text-yellow-600 mb-4 text-center">
           Customised Plan
         </h2>
 
@@ -152,7 +152,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-purple-700 text-white py-3 rounded-lg font-medium hover:bg-purple-800"
+                className="w-full bg-yellow-500 text-white py-3 rounded-lg font-medium hover:bg-yellow-600 cursor-pointer"
               >
                 Submit Enquiry
               </button>

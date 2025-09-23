@@ -48,7 +48,7 @@ const CTAForm = () => {
     >
       <div className="max-w-md mx-auto">
         <motion.h2
-          className="text-2xl md:text-3xl font-bold text-center mb-6 text-[var(--primary-color,#1e3a8a)]"
+          className="text-2xl md:text-3xl font-bold text-center mb-6 text-yellow-600"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -149,7 +149,7 @@ const CTAForm = () => {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 type="submit"
-                className="w-full bg-[var(--primary-color,#1e3a8a)] hover:bg-[var(--accent-color,#facc15)] text-white font-semibold px-4 py-2 rounded-md text-sm transition"
+                className="w-full bg-yellow-500 cursor-pointer hover:bg-yellow-600 text-white tracking-wider px-4 py-2 rounded-md text-sm transition"
               >
                 {isLoading ? "Submitting..." : "Submit Enquiry"}
               </motion.button>
